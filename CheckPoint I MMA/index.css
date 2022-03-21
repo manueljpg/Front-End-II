@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital@1&display=swap');
+
+body {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(153, 156, 158, 0.259104) 5.21%, rgba(40, 48, 52, 0.544118) 21.88%, #283034 34.9%); ;
+}
+
+.telaFormulario {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    margin: 0%;
+    top: 0%;
+    background-image: url("https://www.tomborl.cz/wp-content/uploads/2020/06/A6CF3925-8036-4639-8D2E-94B4C4EC53E0.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 1;
+    
+}
+.gradiente {
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    margin: 0%;
+    top: 0%;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 85%, rgba(153, 156, 158, 0.259104) 90.21%, rgba(40, 48, 52, 0.544118) 95.88%, #283034 34.9%);
+    z-index: 6;
+}
+
+.containerForm {
+    border-top: 50px;
+    position: relative;
+    margin: auto;
+    justify-content: center;
+    width: 700px;
+    height: 737px;
+    background: #E8EBED;
+    border-radius: 34px;
+}
+
+.containerForm img {
+    margin: 20px;
+    width: 200px;
+    height: 200px;
+    border-radius: 5px;
+    text-align: center;
+    border-style:none;
+    object-fit: cover;
+    
+}
+
+form{
+
+    padding: auto;
+    text-align: center;
+    background-color: rgba(220, 252, 255, 0.316);
+    width: 500px;
+    margin: 0 auto;
+    border-radius: none;
+    border-style: none;
+    
+
+
+
+}
+
+label, ::placeholder {
+
+    display: block;
+    font-family: 'Libre Baskerville', serif;
+
+}
+
+.card {
+    position: relative;
+    margin: auto;
+    justify-content: center;
+    width: 700px;
+    height: 737px;
+    }
+    
+.containerForm div {
+    padding-top: 8px;
+}
+
+input, textarea, select{
+    font-family: 'Libre Baskerville', serif;
+    width: 542px;
+    height: 45px;
+    left: 449px;
+    top: 397px;
+    border: 1px solid #6CB4BB;
+    box-sizing: border-box;
+    border-radius: 5px;
+    
+}
+
+
+
+
+
+    
