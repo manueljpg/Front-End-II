@@ -7,27 +7,24 @@ let telaFormulario= document.getElementsByClassName("telaFormulario")
 let bnt=document.querySelector("#botaoSubmit")
 
 
+
 bnt.addEventListener("click",(event)=> {
 
     var card = document.createElement("div")
-    card.classList.add("card")
-    document.telaFormulario.appendChild(card)
+    card.classList.add("cards")
+    document.body.appendChild(card)
   
-    card.innerHTML = 
-    `<div class="row row-cols-1 row-cols-md-3 g-4">
-    <div class="col">
-      <div class="card h-100">
-        <img src="${imagem}" class="card-img-top" alt="">
-        <div class="card-body">
-          <h5 class="card-title">${destino}</h5>
-          <h6>${nomePessoa}</h6>
-          <p class="card-text"> ${comentarios}</p>
-        </div>
-        <div class="card-footer">
-          <small class="text-muted">Viagem para o dia ${data}</small>
-        </div>
-      </div>
-    </div>
-    `
+    card.innerHTML = `
+    <div class="card mb-3">
+  <img src="${imagem.value}" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">${destino.value}</h5>
+    <h6 class="car-title">Viagem de ${nomePessoa.value}</h6>
+    <p class="card-text">${comentarios.value}</p>
+    <p class="card-text"><small class="text-muted">Data da Viagem: ${data.value}</small></p>
+  </div>
+</div><br>`
+
+  
     event.preventDefault()
 });

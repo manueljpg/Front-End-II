@@ -1,7 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital@1&display=swap');
 
 body {
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(153, 156, 158, 0.259104) 5.21%, rgba(40, 48, 52, 0.544118) 21.88%, #283034 34.9%); ;
+    position: relative;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(153, 156, 158, 0.259104) 5.21%, rgba(40, 48, 52, 0.544118) 21.88%, #283034 34.9%);
 }
 
 .telaFormulario {
@@ -17,16 +18,17 @@ body {
     
 }
 .gradiente {
-    position: absolute;
+    position: relative;
     height: 100vh;
     width: 100vw;
     margin: 0%;
     top: 0%;
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 85%, rgba(153, 156, 158, 0.259104) 90.21%, rgba(40, 48, 52, 0.544118) 95.88%, #283034 34.9%);
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 55%, rgba(153, 156, 158, 0.259104) 80.21%, rgba(40, 48, 52, 0.544118) 95.88%, #283034 34.9%);
     z-index: 6;
 }
 
 .containerForm {
+    padding-top: 20;
     border-top: 50px;
     position: relative;
     margin: auto;
@@ -70,17 +72,15 @@ label, ::placeholder {
 
 }
 
-.card {
+.cards {
+    font-family: 'Libre Baskerville', serif;
     position: relative;
     margin: auto;
     justify-content: center;
     width: 700px;
     height: 737px;
     }
-    
-.containerForm div {
-    padding-top: 8px;
-}
+
 
 input, textarea, select{
     font-family: 'Libre Baskerville', serif;
