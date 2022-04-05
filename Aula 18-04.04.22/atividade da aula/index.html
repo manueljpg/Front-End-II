@@ -10,49 +10,39 @@
   <!-- ---------------- estilos compartilhados entre login e signup ---------------- -->
   <link rel="stylesheet" href="styles/acesso.css">
 
-  <!-- ---------------------- lógica aplicada no registro -------------------- -->
+  <!-- ---------------------- lógica aplicada no login ----------------------- -->
   <!-- <script src="/scripts/utils.js"></script> -->
-  <script src="scripts/validar.js"></script>
+  <script src="index.js"></script>
 
 </head>
 
 <body>
-
   <div class="left">
-    <img src="./assets/pessoa-signup.png" alt="">
+    <img src="./assets/pessoa-login.png" alt="">
   </div>
+
   <div class="right">
     <form>
       <div class="form-header">
         <p>To-Do App</p>
       </div>
+      <h1>Acessar</h1>
+
 
       <label>
-        Nome:
-        <input type="text" id="nome">
-      </label>
-      <label>
-        Apelido:
-        <input type="text" id="apelido">
-      </label>
-      <label>
         Email:
-        <input type="text" id="email">
+        <input id="inputEmail" type="email" value="" required>
       </label>
       <label>
         Senha:
-        <input type="password" id="senha">
-      </label>
-      <label>
-        Repetir senha:
-        <input type="password" id="confirmarSenha">
+        <input id="inputPassword" type="password" value="" required>
       </label>
 
-      <button type="button" onclick="validar()">Criar conta</button>
+      <button   type="button" onclick= "entrar()" >Acessar</button>
 
     </form>
     <div class="ingressar">
-      <a href="index.html">Já possui conta? Acesse aqui</a>
+      <a href="signup.html">Não possui conta? Crie agora mesmo</a>
     </div>
   </div>
 

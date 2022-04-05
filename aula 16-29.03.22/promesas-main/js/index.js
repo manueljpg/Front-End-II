@@ -66,35 +66,47 @@ const consultandoBaseDeDados = new Promise((resolve, reject) => {
   // Aqui temos uma solicitação simulada para um banco de dados, com um atraso de 2 segundos.
   //A lógica interna estará  no servidor e nós apenas esperaríamos por uma resposta.
   setTimeout(function () {
-    if (baseDeDados) {
+    if (baseDeDados != null) {
       resolve(baseDeDados);
     } else {
       reject({
-        mensagem: "Base de dados inexistente.",
+        "mensagem": "Base de dados inexistente.",
       });
     }
   }, 2000);
 });
-
+console.log(consultandoBaseDeDados)
 // Aqui realizamos uma consulta da promessa, aguardando sua resposta assíncrona
 
-consultandoBaseDeDados
-  .then(({ resultado }) => {
+consultandoBaseDeDados.then(({ resultado }) => {
     renderizarDadosUsuario(resultado);
   })
   .catch((err) => {
-    console.log(err);
+    console.error();
   });
-const renderizarDadosUsuario = (data) => {
-  console.log("dados", data);
-  const card = document.getElementsByClassName("cards");
 
-  card.innerHTML += ` <div>
-         <img src= ${resultado.imagem.media}" alt="" id="image">
-        <p id="nome"> Nome Completo: ${resultado.nome.titulo} ${resultado.nome.primeiro} ${resultado.nome.ultimo}</p>
-        <p id="email">E-mail: ${resultado.email}</p>
-  </div>
-        `;
+ const renderizarDadosUsuario = (data) => {
+  console.log("objeto", data)
+
+  const card = document.querySelector('ul');
+
+  card.innerHTML = `
+  <li class="cards_item">
+      <div class="card">
+        <div class="card_image"><img src="${data[0].imagem.media}"></div>
+        <div class="card_content">
+          <h2 class="card_title">Nome Completo: ${data[0].nome.titulo} ${data[0].nome.primeiro} ${data[0].nome.ultimo}</h2>
+          <p class="card_text">E-mail: ${data[0].email}</p>
+          <button class="btn card_btn">Entrar em contato</button>
+        </div>
+      </div>
+    </li>
+  `
+//   `<div class="cards">
+// <img src= "${data[0].imagem.grande}" alt="" id="image">
+//    <p id="nome"> Nome Completo: ${data[0].nome.titulo} ${data[0].nome.primeiro} ${data[0].nome.ultimo}</p>
+//    <p id="email">E-mail: ${data[0].email}</p>
+//   </div>`
 };
 
 /* -------------------------------- TAREFAS -------------------------------- */
